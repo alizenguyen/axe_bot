@@ -81,7 +81,7 @@ client.on('message', message => {
 
 })
 
-client.login('NTUzODI4ODgwOTM1Mjg4ODMz.D2WDPg.QSy4s9F8rKWe3PO9NeKDUjjOLWw')
+client.login('NTUzODI4ODgwOTM1Mjg4ODMz.D2WPlQ.qiTP9rKNMkk0ULloZH5Mv7SQysQ')
   .catch( error => console.log(error))
 
 require('http').createServer().listen()
