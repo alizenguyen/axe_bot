@@ -73,6 +73,14 @@ client.on('message', message => {
     memberList = ''
   }
 
+  //WHEN CLEARING LIST =====================================================
+  if (message.content.startsWith('!clear')) {
+    message.channel.send('Guild Battle Sign Up is Cleared.')
+    gbSignUp = []
+  }
+
 })
 
 client.login(process.env.BOT_TOKEN)
+
+require('http').createServer().listen()
