@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
@@ -7,8 +9,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
-    msg.reply('Pong!')
+    msg.reply('Cries')
   }
 })
 
-client.login('NTUzODI4ODgwOTM1Mjg4ODMz.D2TyNw.RITrj_QHkXIsNth6cvLNWOUpcq0')
+client.login(process.env.BOT_TOKEN)

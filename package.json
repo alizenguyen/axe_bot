@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/alizenguyen/axe_bot#readme",
   "dependencies": {
-    "discord.js": "^11.4.2"
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
