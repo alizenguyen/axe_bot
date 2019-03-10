@@ -81,7 +81,7 @@ client.on('message', message => {
 
 })
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.bot_token)
   .catch( error => console.log(error))
 
 require('http').createServer().listen()
