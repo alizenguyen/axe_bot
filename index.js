@@ -98,18 +98,21 @@ client.on('message', message => {
 
   //WHEN REMOVING A MEMBER =====================================================
   if (message.content.startsWith('!remove')) {
-    const removedMember = message.content.substring(8);
+    const removedMember = message.content.substring(8).toLowerCase();
 
-    let index = gbMemberList.indexOf(removedMember);
+    for (i = 0; i < gbMemberList.length; i++) {
+      const char = gbMemberList[i].toLowerCase();
 
-    if (index > -1) {
-      gbMemberList.splice(index, 1);
+      if (char === removedMember){
+          gbMemberList.splice(i, 1);
+      }
     }
 
-    count = 1;
+    count = 0;
     memberList = '';
 
     for (i = 0; i < gbMemberList.length; i++) {
+      count = count + 1
       memberList += count +'. ' + gbMemberList[i] + `\n`
     }
 
@@ -130,5 +133,8 @@ client.on('message', message => {
 
 client.login(process.env.bot_token)
   .catch( error => console.log(error))
+
+// client.login('')
+//   .catch( error => console.log(error))
 
 require('http').createServer().listen()
